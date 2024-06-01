@@ -1,0 +1,146 @@
+/* Mobile-first styles */
+body.modal-open {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header-container {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #292929;
+  font-family: Impact, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.icon-color {
+  stroke: #292929;
+}
+
+.logo-green {
+  color: #00B068;
+}
+
+.header-navigation {
+  display: none;
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu-link {
+  color: #292929;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.header-menu-link:hover {
+  color: #00B068;
+  transition: color 0.3s ease;
+}
+
+.burger-icon,
+.close-modal {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-icon {
+  display: block;
+}
+
+.close-modal {
+  display: none;
+  font-size: 40px;
+}
+
+.modal-header {
+  background-image: url("../img/decor-bg/decor-bg-5-2x.png");
+  background-color: white;
+  background-size: 95%;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 75px);
+  justify-content: center;
+  align-items: center;
+  transition: top 0.5s ease;
+  display: flex;
+}
+
+.modal-header.is-active {
+  top: 75px;
+}
+
+.modal-header.is-hidden {
+  top: -100%;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .header-container {
+    padding: 32px;
+  }
+
+  .burger-icon,
+  .modal-header,
+  .close-modal {
+    display: none !important;
+  }
+
+  .header-navigation {
+    display: block;
+  }
+
+  .header-menu {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .logo {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+  }
+}
